@@ -1,0 +1,54 @@
+﻿<Page x:Class="MarathonMVVM.Pages.AutorisationPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:MarathonMVVM.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="600" d:DesignWidth="1000"
+      Title="AutorisationPage">
+
+    <Grid Background="White">
+        <StackPanel Margin="0,30">
+            <TextBlock FontSize="25" HorizontalAlignment="Center">
+                Форма авторизации
+            </TextBlock>
+
+            <TextBlock Margin="0,20,0,0" FontSize="17" Width="450" TextAlignment="Center" TextWrapping="Wrap">
+                Пожалуйста, авторизуйтесь в системе, используя ваш адрес электронной почты и пароль
+            </TextBlock>
+
+            <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
+                <StackPanel TextBlock.TextAlignment="Right" Margin="0,20">
+                    <TextBlock FontSize="17" Margin="0,10">
+                        Email:
+                    </TextBlock>
+
+                    <TextBlock FontSize="17">
+                        Password: 
+                    </TextBlock>
+                </StackPanel>
+
+                <StackPanel  Margin="10,20">
+                    <TextBox Text="{Binding Login}" Margin="0,10" Width="150" Height="20">
+                        
+                    </TextBox>
+
+                    <TextBox Text="{Binding Password}" Height="20">
+                        
+                    </TextBox>
+                </StackPanel>
+            </StackPanel>
+
+            <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
+                <Button Command="{Binding Autorisation}" Margin="0,0,15,0" Width="100" Height="25" FontSize="15">
+                    Login
+                </Button>
+
+                <Button Width="100" Height="25" FontSize="15">
+                    Cancel
+                </Button>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Page>
